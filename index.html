@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Yummy</title>
+</head>
+<body>
+  
+    <div class="SideNavMenu min-vh-100 position-fixed d-flex">
+        <div class="NavTab d-flex flex-column justify-content-between min-vh-100 text-white p-4">
+            <div class="links ">
+                <ul class="list-unstyled ">
+                    <li class="py-2 " >search</li>
+                    <li onclick="GetAllCategories()" class="py-2" >Categories</li>
+                    <li onclick="GetAllAreas()" class="py-2">Areas</li>
+                    <li class="py-2" onclick="GetAllIngredients()">Ingredients</li>
+                    <li onclick="DisplayContactUs()"   class="py-2">Contact Us</li>
+                </ul>
+            </div>
+            <div class="NavFooter">
+                <div class="NavIcons">
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+              <div class="footer">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+                
+            </div>
+        </div>
+       
+        <div class="NavHeader d-flex flex-column justify-content-between py-4 px-2  bg-white">
+            <img src="./imgs/logo.png" alt="Logo" class="imglogo">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify" id="OpenCloseIcon"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row gy-3" id="RowData">
+            <!-- <div class="col-md-3">
+                <div class="meal position-relative overflow-hidden rounded-2 ">
+                    <img src="./imgs/meal.jpg" alt="meal" class="w-100">
+                    <div class="meal-layer position-absolute d-flex align-items-center justify-content-center">
+                        <h3>cobra</h3>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+       </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js.map"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

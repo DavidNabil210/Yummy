@@ -1,0 +1,26 @@
+.imglogo {
+    width: 50px;
+}
+body{
+    background-color: black;
+}
+i{
+cursor: pointer;
+}
+.meal-layer{
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    transition: .5s;
+}
+.meal:hover .meal-layer{
+    top: 0;
+}
+.SideNavMenu{
+    z-index: 999;
+}
+.NavTab{
+    background-color: black;
+
+}
