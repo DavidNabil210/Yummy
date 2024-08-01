@@ -1,29 +1,29 @@
-let RowData=document.getElementById("RowData");
-var NameRegex=/^[a-z0-9_-]{3,15}$/;
-var EmailRegex=/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
-var PassRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=])(.{8,16})$/;
-var PhoneRegex=/^0(2|3)\d{7,8}$/;
-var ageRegex=/^01[0-2,5]{1}[0-9]{8}$/;
-$(".NavHeader i.open-close-icon").click(()=>{
-    let NavWidth=$(".SideNavMenu .NavTab").outerWidth()
-    if($(".SideNavMenu").css("left")=="0px")
-    {
-        $(".SideNavMenu").animate({left:-NavWidth},500)
-    }else{
-        $(".SideNavMenu").animate({left:0},500)
-    }
-})
-// $(".NavHeader i.open-close-icon").click(() => {
-//     // Get current left position of SideNavMenu (more reliable than CSS value)
+// let RowData=document.getElementById("RowData");
+// var NameRegex=/^[a-z0-9_-]{3,15}$/;
+// var EmailRegex=/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
+// var PassRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=])(.{8,16})$/;
+// var PhoneRegex=/^0(2|3)\d{7,8}$/;
+// var ageRegex=/^01[0-2,5]{1}[0-9]{8}$/;
+// $(".NavHeader i.open-close-icon").click(()=>{
 //     let NavWidth=$(".SideNavMenu .NavTab").outerWidth()
-//     const currentLeft = $(".SideNavMenu").position().left;
+//     if($(".SideNavMenu").css("left")=="0px")
+//     {
+//         $(".SideNavMenu").animate({left:-NavWidth},500)
+//     }else{
+//         $(".SideNavMenu").animate({left:0},500)
+//     }
+// })
+$(".NavHeader i.open-close-icon").click(() => {
+    // Get current left position of SideNavMenu (more reliable than CSS value)
+    let NavWidth=$(".SideNavMenu .NavTab").outerWidth()
+    const currentLeft = $(".SideNavMenu").position().left;
   
-//     // Calculate target left position based on current position
-//     const targetLeft = (currentLeft === 0) ? -NavWidth : 0;
+    // Calculate target left position based on current position
+    const targetLeft = (currentLeft === 0) ? -NavWidth : 0;
   
-//     // Animate SideNavMenu to target position
-//     $(".SideNavMenu").animate({ left: targetLeft }, 500);
-//   });
+    // Animate SideNavMenu to target position
+    $(".SideNavMenu").animate({ left: targetLeft }, 500);
+  });
 async function SearchMealByName(meal){
     let response= await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meal}`)
   
